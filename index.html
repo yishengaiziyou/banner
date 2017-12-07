@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+	body{
+		margin: 0px;
+	}
+	img{
+		display: block;
+	}
+	a{
+		text-decoration: none;
+	}
+	ui,li{
+		list-style: none;
+		margin: 0;
+		padding: 0;	
+	}
+	button{
+		margin: auto;
+		width: 60px;
+		height: 65px;
+		background: rgba(0, 0, 0, .5);
+		z-index: 99999;
+
+	}
+	.left{
+		position: absolute;
+		top: 200px;
+		left: 234px;
+	}
+	.right{
+		position: absolute;
+		top: 200px;
+		left: 1166px;
+	}
+	.arr{
+		width: 200px;
+		height: 20px;
+		position: absolute;
+		top: 440px;
+		left: 613px;
+		z-index: 100;
+		display: flex;
+		justify-content: space-between;
+	}
+	.arr .dian{
+		width: 20px;
+		height: 20px;
+		background: #fff;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+	.arr .dian1{
+		background: greenyellow;
+	}
+	.connn{
+		width: 795px;
+		height: 458px;
+		background-color: #fff;
+		border: 1px solid #e6e6e6;
+		z-index: 200;
+		position: absolute;
+		top: 0;
+		left: 234px;
+		display: none;
+		margin: 0;
+		padding-left: 0;
+	}
+	.kaji{
+		z-index: 201;
+		float: left;
+		margin-right: 100px;
+		margin-top: 10px;
+	}
+	.kaji img{
+		float: left;
+	}
+	.kaji span{
+		display: block;
+		float: left;
+		margin-top: 25px;
+		font-size: 14px;
+		color: #000;
+	}
+	.kaji span:hover{
+		color: #FF6700;
+	}
+	.conn-active{
+		display: block;
+	}
+	.connn-active{
+		display: block;
+	}
+	.xuanxiangka{
+		height: 88px;
+		float: left;
+	}
+	.xuanxiangka .conn img{
+		float: left;
+	}
+	.logolan .logo input{
+		position: absolute;
+		top: 25px;
+		z-index: 1;
+		width: 223px;
+		height: 50px;
+		padding: 0 10px;
+		border: 1px solid #e0e0e0;
+		font-size: 14px;
+		line-height: 48px;
+		outline: 0;
+		float: left;
+	}
+	.logolan .logo .sousuo{
+		position: absolute;
+		top: 25px;
+		right: 348px;
+	    z-index: 2;
+	    width: 50px;
+	    height: 50px;
+	    border: 0;
+	    border: 1px solid #e0e0e0;
+	    font-size: 24px;
+	    line-height: 24px;
+	    background: #fff;
+	    color: #616161;
+	    outline: 0;
+	}
+	.banna{
+		width: 1226px;
+		height: 460px;
+		margin: 0 auto;
+		position: relative;
+	}
+	.banna .icon-xiangzuo1{
+		width: 28px;
+		height: 60px;
+		position: absolute;
+		top: 200px;
+		right: 0;
+		font-size: 30px;
+		margin-right: 0px;
+		color: #ABB1C0;
+		z-index: 99;
+		line-height: 60px;
+	}
+	.banna .icon-xiangzuo{
+		width: 28px;
+		height: 60px;
+		position: absolute;
+		top: 200px;
+		left: 234px;
+		font-size: 30px;
+		color: #ABB1C0;
+		z-index: 99;
+		line-height: 60px;
+	}
+	.banna .icon-xiangzuo1:hover,.banna .icon-xiangzuo:hover{
+		color: #fff;
+		background: rgba(0, 0, 0, 0.5);
+	}
+	.banna .wuyifan .bbj{
+		width: 1226px;
+		height: 460px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+	}
+	.banna .wuyifan .bbj1{
+		opacity: 1;
+	}
+	.banna .daohangleft{
+		width: 234px;
+		height: 420px;
+		background: rgba(0, 0, 0, .7);
+		position: absolute;
+		padding: 20px 0;
+	}
+	.banna .daohangleft .kk{
+		width: 204px;
+		height: 42px;
+		padding-left: 30px;
+		line-height: 42px;
+		color: #fff;
+		font-size: 15px;
+		float: left;
+	}
+	.banna .daohangleft .kk:hover{
+		background: #FF6700;
+	}
+	.banna .daohangleft .kk span{
+		display: block;
+		float: right;
+	}
+</style>
+</head>
+<body>
+	<div class="banna">
+		<div class="arr">
+			<div class="dian dian1"></div>
+			<div class="dian"></div>
+			<div class="dian"></div>
+			<div class="dian"></div>
+			<div class="dian"></div>
+			<div class="dian"></div>
+		</div>
+		<button class="left"> < </button>
+		<button class="right"> > </button>
+		<div class="wuyifan">
+			<a href="">
+				<div class="bbj bbj1">
+					<img class="laji" src="img/banner1.jpg" alt="">
+				</div>
+				<div class="bbj">
+					<img class="laji" src="img/banner2.jpg" alt="">
+				</div>
+				<div class="bbj">
+					<img class="laji" src="img/banner3.jpg" alt="">
+				</div>
+				<div class="bbj">
+					<img class="laji" src="img/banner4.jpg" alt="">
+				</div>
+				<div class="bbj">
+					<img class="laji" src="img/banner5.jpg" alt="">
+				</div>
+				<div class="bbj">
+					<img class="laji" src="img/banner6.jpg" alt="">
+				</div>
+			</a>
+		</div>
+		<div class="daohangleft">
+			<a href="">
+				<div class="xuanxiangkaka">
+				<a href=""><div class="kk">手机<span>></span></div></a>
+				<ul class="connn">
+					111
+				</ul>
+				</div>
+				<div class="xuanxiangkaka">
+				<a href=""><div class="kk">手机<span>></span></div></a>
+				<ul class="connn">
+					222
+				</ul>
+				</div>
+				<div class="xuanxiangkaka">
+				<a href=""><div class="kk">手机<span>></span></div></a>
+				<ul class="connn">
+					333
+				</ul>
+				</div>
+				<div class="xuanxiangkaka">
+				<a href="">	<div class="kk">手机<span>></span></div></a>
+				<ul class="connn">
+					444
+				</ul>
+				</div>
+				<div class="xuanxiangkaka">
+				<a href="">	<div class="kk">手机<span>></span></div></a>
+				<ul class="connn">
+					555
+				</ul>
+				</div>
+				<div class="xuanxiangkaka">
+				<a href=""><div class="kk">手机<span>></span></div></a>
+				<ul class="connn">
+					666
+				</ul>
+				</div>
+				<div class="xuanxiangkaka">
+				<a href="">	<div class="kk">手机<span>></span></div></a>
+				<ul class="connn">
+					777
+				</ul>
+				</div>
+				<div class="xuanxiangkaka">
+				<a href="">	<div class="kk">手机<span>></span></div>
+				<ul class="connn">
+					888
+				</ul>
+				</div>
+				<div class="xuanxiangkaka">
+				<a href="">	<div class="kk">手机<span>></span></div></a>
+				<ul class="connn">
+					999
+				</ul>
+				</div>
+				<div class="xuanxiangkaka">
+				<a href="">	<div class="kk">手机<span>></span></div></a>
+				<ul class="connn">
+					aaa
+				</ul>
+				</div>
+			</a>
+		</div>
+	</div>
+</body>
+</html>
+<script>
+	/*
+	1.初始化css
+		*第一张opacity:1
+		*其余：opacity：0
+	2.获取元素
+		*图片       .banner-box>li  6
+	3.让图片自动播放
+		*开启时间函数  setInterval()
+			*控制当前显示图片的下表 num
+			*遍历图片 显示完以后再拉回初始状态
+			*num++;
+	4.停止自动播放
+		*鼠标移入 大盒子
+			clear
+	5.通过轮播点控制图片
+		* 得到每一个轮播点
+			*for forEach
+				*鼠标移入事件 on
+							  addEventListener
+	*/
+	let bbj = document.querySelectorAll('.bbj');//获取元素
+	let ban_box = document.getElementsByClassName('banna')[0];
+	let num = 0;									  //声明一个下标
+	let t = setInterval(move,2000);					  //开启一个时间函数
+	let dian = document.querySelectorAll('.dian');	
+	let left = document.querySelector('.left');		
+	let right = document.querySelector('.right');	
+	console.log(left,right);		  
+	function move(type){					//事件函数内容
+		type = type || 'right';
+		if(type == 'right'){
+			num ++;
+			if(num == bbj.length){					  //判断下标是否全部便利完成
+				num = 0;								  //遍历完成后下标拉回0
+			}
+		}else if(type == 'left'){
+			num--;
+			if(num == -1){
+				num = bbj.length-1;
+			}
+		}		
+
+		bbj.forEach(function(ele,index){			  //用forEach遍历所有banner，然后获取所有banner
+			ele.style.opacity = 0;					  //操作所有的banner透明度为0
+			dian[index].style.backgroundColor = '#fff';
+		});
+		bbj[num].style.opacity = 1;				  //操作当前banner的透明度为1
+		dian[num].style.backgroundColor = 'greenyellow';										  //然后下标+1，进行下一个操作
+	}
+	ban_box.onmouseover = function(){
+		clearInterval(t);
+	}
+	ban_box.onmouseout = function(){
+		t = setInterval(move,2000);
+	}
+
+	dian.forEach(function(eled,indexd){
+		eled.addEventListener('click',function(){
+			bbj.forEach(function(ele,index){			   
+			ele.style.opacity = 0;					  
+			dian[index].style.backgroundColor = '#fff';
+			})
+			bbj[indexd].style.opacity = 1;	
+			dian[indexd].style.backgroundColor = 'greenyellow';
+			num = indexd;
+		})	
+	})
+	right.onclick = function(){
+		move('right');
+	}
+	left.onclick = function(){
+		move('left');
+	}
+</script>
+<script>
+	let xuanxiangkaka = document.getElementsByClassName('xuanxiangkaka');
+		let connn = document.getElementsByClassName('connn');
+		for(let i = 0;i < xuanxiangkaka.length;i++){
+			xuanxiangkaka[i].onmouseover = function(){
+				for(j = 0;j < connn.length;j++){
+					connn[j].classList.remove('connn-active');
+				}
+				connn[i].classList.add('connn-active');
+				xuanxiangkaka[i].onmouseout = function(){
+				for(j = 0;j < connn.length;j++){
+					connn[j].classList.remove('connn-active');
+				}
+				}
+			}
+		}
+</script>
